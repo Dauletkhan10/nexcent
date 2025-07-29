@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexcent Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand img {
+            height: 30px;
+        }
+
+        .nav-link {
+            color: #000 !important;
+        }
+
+        .btn-signup {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-signup:hover {
+            background-color: #218838;
+        }
+
+        .hero-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .btn-register {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 30px;
+            border: none;
+        }
+
+        .btn-register:hover {
+            background-color: #218838;
+        }
+
+        .hero-image {
+            width: 70%;
+            height: auto;
+        }
+
+        .clients-section {
+            padding: 40px 0;
+            background-color: #f8f9fa;
+        }
+
+        .client-logo {
+            width: 50px;
+            height: 50px;
+            filter: grayscale(100%);
+        }
+
+        .client-logo:hover {
+            filter: none;
+        }
+
+        .community-section {
+            padding: 60px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .community-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .community-subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .card-community {
+            border: none;
+            text-align: center;
+        }
+
+        .card-community .icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .card-community .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-community .card-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .pixelgrade-section {
+            padding: 60px 0;
+            background-color: #fff;
+            text-align: left;
+        }
+
+        .pixelgrade-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .pixelgrade-text {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-learn {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 30px;
+            border: none;
+        }
+
+        .btn-learn:hover {
+            background-color: #218838;
+        }
+
+        .pixelgrade-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .reinvent-section {
+            padding: 40px 0;
+            background-color: #f0f4f8;
+            text-align: left;
+        }
+
+        .reinvent-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4D4D4D;
+            margin-bottom: 0.5rem;
+        }
+
+        .reinvent-text {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-item {
+            font-size: 1.25rem;
+            color: #333;
+            text-align: left;
+        }
+
+        .stat-value {
+            font-weight: 700;
+            color: #28a745;
+        }
+
+
+
+        .accordion-item {
+            border: none;
+            background-color: transparent;
+        }
+
+        .accordion-button {
+            background-color: #fff;
+            color: #333;
+            font-weight: 600;
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        .accordion-body {
+            padding: 1rem;
+            color: #666;
+        }
+
+        .about-section {
+            padding: 60px 0;
+            background-color: #fff;
+            text-align: left;
+        }
+
+        .about-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .about-text {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-about {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 30px;
+            border: none;
+        }
+
+        .btn-about:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/Logo.png" alt="Nexcent Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feature">Feature</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#product">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonial">Testimonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a class="nav-link me-3" href="#login">Login</a>
+                    <a href="#signup" class="btn btn-signup">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 hero-content">
+                    <h1 class="hero-title">Lessons and insights <span style="color: #28a745;">from 8 years</span></h1>
+                    <p class="hero-subtitle">Where to grow your business as a photographer: site or social media?</p>
+                    <a href="#register" class="btn btn-register">Register</a>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="img/Illustration.png" alt="Hero Image" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+        <div class="container">
+            <h2 class="text-center">Our Clients</h2>
+            <p class="text-center">We have been working with some Fortune 500+ clients</p>
+            <div class="row mt-4 g-4 justify-content-around">
+                <div class="col-6 col-sm-4 col-md-2 col-lg-1">
+                    <img src="img/clients/client1.png" alt="Client 1" class="client-logo mx-auto d-block w-80">
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 col-lg-1">
+                    <img src="img/clients/client2.png" alt="Client 2" class="client-logo mx-auto d-block w-41">
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 col-lg-1">
+                    <img src="img/clients/client3.png" alt="Client 3" class="client-logo mx-auto d-block w-41">
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 col-lg-1">
+                    <img src="img/clients/client4.png" alt="Client 4" class="client-logo mx-auto d-block w-41">
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 col-lg-1">
+                    <img src="img/clients/client5.png" alt="Client 5" class="client-logo mx-auto d-block w-41">
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 col-lg-1">
+                    <img src="img/clients/client6.png" alt="Client 6" class="client-logo mx-auto d-block w-41">
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 col-lg-1">
+                    <img src="img/clients/client7.png" alt="Client 7" class="client-logo mx-auto d-block w-41">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community-section">
+        <div class="container">
+            <h2 class="community-title">Manage your entire community <br>in a single system</h2>
+            <p class="community-subtitle">Who is Nexcent suitable for?</p>
+            <div class="row g-4 mt-4 justify-content-around">
+                <div class="col-12 col-md-3">
+                    <div class="card card-community">
+                        <img src="img/Icon.png" alt="Membership Icon" class="icon mx-auto d-block">
+                        <h3 class="card-title">Membership Organisations</h3>
+                        <p class="card-text">Our membership management software provides full automation of membership
+                            renewals and payments.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="card card-community">
+                        <img src="img/icon1.png" alt="National Icon" class="icon mx-auto d-block">
+                        <h3 class="card-title">National Associations</h3>
+                        <p class="card-text">Our membership management software provides full automation of membership
+                            renewals and payments.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="card card-community">
+                        <img src="img/icon2.png" alt="Clubs Icon" class="icon mx-auto d-block">
+                        <h3 class="card-title">Clubs And Groups</h3>
+                        <p class="card-text">Our membership management software provides full automation of membership
+                            renewals and payments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pixelgrade Section -->
+    <section class="pixelgrade-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="img/Frame35.png" alt="Pixelgrade Illustration" class="pixelgrade-image">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="pixelgrade-title">The unseen of spending three years at Pixelgrade</h2>
+                    <p class="pixelgrade-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
+                        perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                        rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                        sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                        quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <a href="#learn-more" class="btn btn-learn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reinvent Section -->
+    <section class="reinvent-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <h2 class="reinvent-title" style="color: #4D4D4D;">Helping a local </h2>
+                    <h2 class="reinvent-title" style="color: #28a745;">business reinvent itself</h2>
+                    <p class="reinvent-text">We reached here with our hard work and dedication</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="stat-item text-center">
+                                <img src="img/achievements/icon1.png" alt="Members Icon" class="me-2">
+                                <span class="stat-value">2,245,341</span><br>Members
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-item text-center">
+                                <img src="img/achievements/icon2.png" alt="Clubs Icon" class="me-2">
+                                <span class="stat-value">46,328</span><br>Clubs
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-item text-center">
+                                <img src="img/achievements/icon3.png" alt="Event Bookings Icon" class="me-2">
+                                <span class="stat-value">828,867</span><br>Event Bookings
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-item text-center">
+                                <img src="img/achievements/icon4.png" alt="Payments Icon" class="me-2">
+                                <span class="stat-value">1,926,436</span><br>Payments
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="img/grroup.png" alt="About Us Illustration" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="about-title">How to design your site footer like <br>we did</h2>
+                    <p class="about-text">Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec
+                        tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at
+                        libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta
+                        nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt.
+                        Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et
+                        nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.</p>
+                    <a href="#learn-more" class="btn btn-about">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Partner Section -->
+    <section class="partner-section py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="img/img1.png" alt="Partner Logo" class="img-fluid mb-3" style="width: 80%;">
+                </div>
+                <div class="col-md-8">
+                    <p class="">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem
+                        dui, vel rutrum risus tincid lorem. Proin eu enim metus. Vivamus sed libero omare, tristique
+                        quam in, gravida enim. Nullam ut posuere arcu, at hendrerit elit. Morbi lacreet elit at ligula
+                        molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ulticies, quis tristique
+                        nulla sodales. Suspendisse eget lorem eu ultricies vulputate. Suspendisse potenti. Quisque
+                        malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget
+                        efficitur libero condimentum id. Curabitur id nibh sem dignissim finibus ac sit amet magna.</p>
+                    <p class=""><strong style="color: #28a745;">Tim Smith</strong><br><br>British Dragon Boat
+                        Racing Association</p>
+                    <div class="d-flex justify-content-start align-items-center mt-3">
+                        <a href="#" class="me-3"><img src="img/clients/client1.png" alt="Client 1" class="client-logo"
+                                style="width: 48px;"></a>
+                        <a href="#" class="me-3"><img src="img/clients/client2.png" alt="Client 2" class="client-logo"
+                                style="width: 48px;"></a>
+                        <a href="#" class="me-3"><img src="img/clients/client3.png" alt="Client 3" class="client-logo"
+                                style="width: 48px;"></a>
+                        <a href="#" class="me-3"><img src="img/clients/client4.png" alt="Client 4" class="client-logo"
+                                style="width: 48px;"></a>
+                        <a href="#" class="me-3"><img src="img/clients/client5.png" alt="Client 5" class="client-logo"
+                                style="width: 48px;"></a>
+                        <a href="#" class="me-3"><img src="img/clients/client6.png" alt="Client 6" class="client-logo"
+                                style="width: 48px;"></a>
+                        <a href="#" class="text-success fw-bold">Meet all customers <span>&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog Section -->
+        <section class="blog-section py-5 bg-white">
+            <div class="container">
+                <div class="text-center mb-2">
+                    <h2 class="fw-bold mb-1">Caring is the new marketing</h2>
+                    <p class=" mb-0" style="width: 40%; margin-left: 30%;">The Nexcent blog is the best place
+                        to read about the latest membership
+                        insights, trends and more. See who's joining the community, read about how our community are
+                        increasing their membership income and lots more.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card border-0 position-relative">
+                            <img src="img/гид/image.png" alt="Blog 1" class="card-img-top w-100">
+                            <div class="card-img-overlay p-3 d-flex justify-content-end">
+                                <div class="bg-white p-2 rounded shadow-sm" style="position: absolute; bottom: -20px;">
+                                    <h5 class="card-title mb-1">Creating Streamlined Safeguarding Processes with OneRen
+                                    </h5>
+                                    <a href="#" class="btn btn-outline-success btn-sm">Readmore <span>&rarr;</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 position-relative">
+                            <img src="img/гид/image1.png" alt="Blog 2" class="card-img-top w-100">
+                            <div class="card-img-overlay p-3 d-flex justify-content-end">
+                                <div class="bg-white p-2 rounded shadow-sm" style="position: absolute; bottom: -20px;">
+                                    <h5 class="card-title mb-1">What are your safeguarding responsibilities and how can
+                                        you manage them?</h5>
+                                    <a href="#" class="btn btn-outline-success btn-sm">Readmore <span>&rarr;</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 position-relative">
+                            <img src="img/гид/image2.png" alt="Blog 3" class="card-img-top w-100">
+                            <div class="card-img-overlay p-3 d-flex justify-content-end">
+                                <div class="bg-white p-2 rounded shadow-sm" style="position: absolute; bottom: -20px;">
+                                    <h5 class="card-title mb-1">Revamping the Membership Model with Triathlon Australia
+                                    </h5>
+                                    <a href="#" class="btn btn-outline-success btn-sm">Readmore <span>&rarr;</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <a class="dg-widget-link"
+                href="http://2gis.kz/almaty/firm/9429940001674266/center/76.94352149963379,43.26234683179405/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть
+                на карте Алматы</a>
+            <div class="dg-widget-link"><a
+                    href="http://2gis.kz/almaty/firm/9429940001674266/photos/9429940001674266/center/76.94352149963379,43.26234683179405/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии
+                    компании</a></div>
+            <div class="dg-widget-link"><a
+                    href="http://2gis.kz/almaty/center/76.943525,43.261765/zoom/16/routeTab/rsType/bus/to/76.943525,43.261765╎kari, магазин обуви и аксессуаров?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти
+                    проезд до kari, магазин обуви и аксессуаров</a></div>
+            <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+            <script
+                charset="utf-8">new DGWidgetLoader({ "width": 640, "height": 600, "borderColor": "#a3a3a3", "pos": { "lat": 43.26234683179405, "lon": 76.94352149963379, "zoom": 16 }, "opt": { "city": "almaty" }, "org": [{ "id": "9429940001674266" }] });</script>
+            <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите
+                его в настройках вашего браузера.</noscript>
+            <style>
+                iframe {
+                    width: 100%;
+
+                }
+            </style>
+        </section>
+        <!-- Contact Form Section -->
+        <section class="contact-form-section py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <h2 class="text-center mb-4">Contact Us</h2>
+                        <form id="telegramForm" class="p-4 bg-white rounded shadow-sm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Enter</button>
+                        </form>
+                        <div id="toastNotification" class="position-fixed bottom-0 start-0 p-3"
+                            style="z-index: 11; display: none;">
+                            <div id="toast" class="bg-success text-white p-2 rounded"
+                                style="opacity: 0; transition: opacity 0.5s;">
+                                Message sent successfully!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            document.getElementById('telegramForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const botToken = '8366244544:AAE69ej4Ufk9M6xpp-lamvQ-JA13KmOsWDc'; // Замените на ваш токен бота
+                const chatId = '-4824974508'; // Замените на ваш chat ID
+
+                const message = `Name: ${name}\nPhone: ${phone}`;
+                const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            chat_id: chatId,
+                            text: message
+                        })
+                    });
+
+                    if (response.ok) {
+                        // Показать уведомление
+                        const toast = document.getElementById('toast');
+                        toast.style.opacity = 1;
+                        setTimeout(() => {
+                            toast.style.opacity = 0;
+                        }, 3000);
+
+                        // Очистить форму
+                        document.getElementById('telegramForm').reset();
+                    } else {
+                        alert('Failed to send message. Please try again.');
+                    }
+                } catch (error) {
+                    alert('An error occurred. Please check your internet connection.');
+                }
+            });
+        </script>
+        <!-- Footer Section -->
+        <footer class="footer-section py-4 bg-dark text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <img src="img/Logo.png" alt="Nexcent Logo" class="mb-2" style="height: 30px;">
+                        <p style="color: white;">Copyright © 2020 Nexcent Ltd.<br>All rights reserved</p>
+                        <div>
+                            <a href="#" style="color: white;"><i class="bi bi-instagram me-2"
+                                    style="color: white;"></i></a>
+                            <a href="#"><i class="bi bi-facebook me-2"></i></a>
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h5 class="fw-bold">Company</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none" style="color: white;">About us</a></li>
+                            <li><a href="#" class=" text-decoration-none" style="color: white;">Blog</a></li>
+                            <li><a href="#" class=" text-decoration-none" style="color: white;">Contact us</a></li>
+                            <li><a href="#" class=" text-decoration-none" style="color: white;">Pricing</a></li>
+                            <li><a href="#" class=" text-decoration-none" style="color: white;">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h5 class="fw-bold">Support</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class=" text-decoration-none" style="color: white;">Help center</a></li>
+                            <li><a href="#" class=" text-decoration-none" style="color: white;">Terms of service</a>
+                            </li>
+                            <li><a href="#" class=" text-decoration-none" style="color: white;">Legal</a></li>
+                            <li><a href="#" class=" text-decoration-none" style="color: white;">Privacy policy</a></li>
+                            <li><a href="#" class=" text-decoration-none" style="color: white;">Status</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h5 class="fw-bold">Stay up to date</h5>
+                        <div class="input-group mt-2">
+                            <input type="email" class="form-control" placeholder="Your email address"
+                                aria-label="Your email address">
+                            <button class="btn btn-outline-light" type="button"><i
+                                    class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
